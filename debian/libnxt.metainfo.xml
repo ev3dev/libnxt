@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+  <id>libnxt</id>
+  <metadata_license>MIT</metadata_license>
+  <name>libnxt</name>
+  <summary>utility library for talking to the LEGO Mindstorms NXT brick</summary>
+  <description>
+    <p>
+LibNXT is an utility library for talking to the LEGO Mindstorms NXT
+intelligent brick at a relatively low level.
+    </p>
+  </description>
+  <provides>
+    <modalias>usb:v0694p0002d*</modalias>
+    <modalias>usb:v03EBp*</modalias>
+  </provides>
+</component>

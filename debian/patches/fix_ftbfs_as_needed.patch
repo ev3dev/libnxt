@@ -1,0 +1,16 @@
+Description: Fix FTBFS with ld --as-needed.
+Author: Felix Geyer <fgeyer@debian.org>
+
+--- libnxt-0.3.orig/SConstruct
++++ libnxt-0.3/SConstruct
+@@ -28,8 +28,8 @@ Default(BuildEnv.Library('nxt',
+ 			 LIBS='usb'))
+ 
+ Default(BuildEnv.Program('fwflash', 'main_fwflash.c',
+-			 LIBS=['usb', 'nxt'], LIBPATH='.',
++			 LIBS=['nxt', 'usb'], LIBPATH='.',
+ 			 ))
+ 
+ Default(BuildEnv.Program('fwexec', 'main_fwexec.c',
+-			 LIBS=['usb', 'nxt'], LIBPATH='.'))
++			 LIBS=['nxt', 'usb'], LIBPATH='.'))

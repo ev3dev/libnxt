@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	scons LDFLAGS="$(shell dpkg-buildflags --get LDFLAGS)" CCFLAGS="$(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)"
+
+override_dh_auto_clean: 
+	dh_auto_clean
+	scons -c
+	rm -f .sconsign.dblite || true

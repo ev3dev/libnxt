@@ -1,0 +1,10 @@
+# See uscan(1) for format
+
+# Compulsory line, this is a version 3 file
+version=3
+
+# Uncomment to find new files on GooglePages
+#http://code.google.com/p/libnxt/downloads/list http://libnxt.googlecode.com/files/libnxt-(.*)\.tar\.gz
+
+opts=downloadurlmangle=s#.*(libnxt-([\d.]+)\.tar\.gz).*#http://libnxt.googlecode.com/files/$1#,filenamemangle=s#.*(libnxt-([\d.]+)\.tar\.gz).*#$1# \
+    http://code.google.com/p/libnxt/downloads/list ^.*detail\?name=libnxt-([\d.]+)\.tar\.gz.*

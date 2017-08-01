@@ -1,0 +1,3 @@
+fwflash		/usr/bin
+fwexec		/usr/bin
+debian/libnxt.metainfo.xml /usr/share/metainfo

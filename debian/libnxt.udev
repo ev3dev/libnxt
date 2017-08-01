@@ -1,0 +1,9 @@
+# NXT 2.0 brick
+SUBSYSTEM=="usb", ACTION=="add", ATTR{idVendor}=="0694", ATTR{idProduct}=="0002", \
+    MODE="0660", GROUP="plugdev", SYMLINK+="nxt-%k", \
+    ENV{ID_LEGO_MINDSTORMS}="1", TAG+="uaccess"
+
+# NXT 2.0 brick in flash mode
+SUBSYSTEM=="usb", ACTION=="add", ATTR{idVendor}=="03eb", \
+    MODE="0660", GROUP="plugdev", \
+    ENV{ID_LEGO_MINDSTORMS}="1", TAG+="uaccess"

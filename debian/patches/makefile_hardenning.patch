@@ -1,0 +1,25 @@
+Description: Modifing the SConstruct to apply the hardenning flags
+Author: Slavko <linux@slavino.sk>
+--- a/SConstruct
++++ b/SConstruct
+@@ -14,6 +14,10 @@
+ if auto_libs:
+ 	BuildEnv.ParseConfig('pkg-config --cflags --libs ' + auto_libs)
+ 
++BuildEnv.Append(LINKFLAGS='-z relro')
++BuildEnv.Append(CCFLAGS=['-g', '-O2', '-fstack-protector', '--param=ssp-buffer-size=4',
++			 '-Wformat', '-Werror=format-security', '-D_FORTIFY_SOURCE=2'])
++
+ BuildEnv.Command('flash_routine.h',
+ 		 'flash_routine.h.base',
+ 		 './make_flash_header.py')
+@@ -24,7 +28,8 @@
+ 			 LIBS='usb'))
+ 
+ Default(BuildEnv.Program('fwflash', 'main_fwflash.c',
+-			 LIBS=['usb', 'nxt'], LIBPATH='.'))
++			 LIBS=['usb', 'nxt'], LIBPATH='.',
++			 ))
+ 
+ Default(BuildEnv.Program('fwexec', 'main_fwexec.c',
+ 			 LIBS=['usb', 'nxt'], LIBPATH='.'))

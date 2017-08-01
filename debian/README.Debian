@@ -1,0 +1,9 @@
+----------------------------
+Debian README file for libnxt
+----------------------------
+
+UDEV RULE
+-----------------
+
+The udev rules are prepared to allow read/write to device for plugdev group,
+then make sure that you are member of this group.
