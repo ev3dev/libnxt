@@ -1,5 +1,6 @@
 libnxt (0.3-9ev3dev1) bionic; urgency=medium
 
+  * Unbind kernel driver before using USB connection
   * ev3dev takeover
 
  -- David Lechner <david@lechnology.com>  Tue, 22 Oct 2019 22:34:32 -0500
