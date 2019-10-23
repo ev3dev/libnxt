@@ -1,15 +1,12 @@
 Source: libnxt
 Section: electronics
 Priority: extra
-Maintainer: Debian LEGO Team <debian-lego-team@lists.alioth.debian.org>
-Uploaders:
- Petter Reinholdtsen <pere@debian.org>,
- Dominik george <nik@naturalnet.de>,
-Build-Depends: debhelper (>= 9), libusb-dev (>= 0.1.12), scons (>= 1.2)
-Standards-Version: 4.0.0
+Maintainer: David Lechner <david@lechnology.com>
+Build-Depends: debhelper (>= 10), libusb-dev (>= 0.1.12), scons (>= 1.2)
+Standards-Version: 4.1.4
 Homepage: http://code.google.com/p/libnxt
-Vcs-Git: https://anonscm.debian.org/git/debian-lego/libnxt.git
-Vcs-Browser: https://anonscm.debian.org/cgit/debian-lego/libnxt.git
+Vcs-Git: https://github.com/ev3dev/libnxt.git
+Vcs-Browser: https://github.com/ev3dev/libnxt
 
 Package: libnxt
 Architecture: any

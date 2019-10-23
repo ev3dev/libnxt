@@ -1,3 +1,9 @@
+libnxt (0.3-9ev3dev1) bionic; urgency=medium
+
+  * ev3dev takeover
+
+ -- David Lechner <david@lechnology.com>  Tue, 22 Oct 2019 22:34:32 -0500
+
 libnxt (0.3-9) unstable; urgency=medium
 
   * Correct content of d/compat to list level 9, not level 8.
